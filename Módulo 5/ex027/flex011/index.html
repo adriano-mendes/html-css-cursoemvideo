@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box</title>
+  <style>
+    div.container {
+      background-color: lightsalmon;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    div.item {
+      background-color: lightskyblue;
+      text-align: center;
+      border: 1px solid #000;      
+
+    }
+
+    #caixaA {
+      flex: 4 0 200px; /*flex-grow flex-shrink flex-basis*/
+    }
+
+    #caixaB {
+      flex: 1 1 150px; /*flex-grow flex-shrink flex-basis*/
+    }
+
+    #caixaC {
+      flex: 0 2 auto; /*flex-grow flex-shrink flex-basis*/
+    }
+
+    /*
+      flex: 0 1 auto === flex: initial
+      flex: 0 0 auto === flex: none
+      flex: 1 1 auto === flex: auto
+      flex: 3 === flex: 3 1 auto
+    */
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item" id="caixaA">A</div>
+    <div class="item" id="caixaB">B</div>
+    <div class="item" id="caixaC">C</div>
+    
+  </div>
+</body>
+</html>
